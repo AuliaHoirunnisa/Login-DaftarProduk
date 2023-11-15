@@ -66,6 +66,27 @@ class LoginView extends StatelessWidget {
           ),
         ),
       )),
+      bottomNavigationBar: Container(
+        height: 50,
+        color: Colors.white,
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Don\'t have an account?',
+            ),
+            InkWell(
+              child: Text(
+                'Sign Up',
+                style: TextStyle(
+                  color: GlobalColors.mainColor,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
