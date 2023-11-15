@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login/utils/global.colors.dart';
 
 class ButtonGlobal extends StatelessWidget {
-  const ButtonGlobal({super.key});
+  const ButtonGlobal({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // ignore: avoid_print
-        print('Login');
+        // Navigate to the next page when the button is tapped
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => NextPage()),
+        );
       },
       child: Container(
         alignment: Alignment.center,
@@ -24,12 +27,26 @@ class ButtonGlobal extends StatelessWidget {
               )
             ]),
         child: const Text(
-          'Sign In',
+          'Sign in',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w600,
           ),
         ),
+      ),
+    );
+  }
+}
+
+class NextPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Next Page'),
+      ),
+      body: Center(
+        child: Text('This is the next page.'),
       ),
     );
   }
