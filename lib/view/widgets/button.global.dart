@@ -14,6 +14,11 @@ class ButtonGlobal extends StatelessWidget {
           context,
           MaterialPageRoute(builder: (context) => NextPage()),
         );
+        // Navigate to the next page when the button is tapped
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => NextPage()),
+        );
       },
       child: Container(
         alignment: Alignment.center,
